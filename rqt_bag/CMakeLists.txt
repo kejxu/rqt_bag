@@ -15,3 +15,7 @@ install(DIRECTORY launch resource
 install(PROGRAMS scripts/rqt_bag
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+if (WIN32)
+  add_windows_python_exe_helper(rqt_bag)
+endif()
